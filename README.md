@@ -1,4 +1,4 @@
-# 📊 Hệ thống Dashboard Phân tích Hiệu suất Bản hàng Olist (Olist Sales Performance Dashboard)
+# 📊 Hệ thống Dashboard Phân tích Hiệu suất Bán hàng Olist (Olist Sales Performance Dashboard)
 
 Ứng dụng Dashboard phân tích dữ liệu thương mại điện tử Olist (Brazil) sử dụng Flask (Backend) và Plotly.js (Frontend).
 
