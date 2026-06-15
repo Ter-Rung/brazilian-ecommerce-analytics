@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <aside class="sidebar">
+            <div class="logo">📊 Analytics</div>
+            <nav>
+                <a class="active">Dashboard</a>
+                <a>Revenue</a>
+                <a>Customers</a>
+                <a>Products</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+
+            <section class="topbar">
+                <h1>Dashboard</h1>
+
+                <div class="filters-wrapper">
+                    <div class="filters">
+                        <select id="yearFilter"></select>
+
+                        <select id="monthFilter">
+                            <option value="">All Month</option>
+                            <option value="1">Jan</option>
+                            <option value="2">Feb</option>
+                            <option value="3">Mar</option>
+                            <option value="4">Apr</option>
+                            <option value="5">May</option>
+                            <option value="6">Jun</option>
+                            <option value="7">Jul</option>
+                            <option value="8">Aug</option>
+                            <option value="9">Sep</option>
+                            <option value="10">Oct</option>
+                            <option value="11">Nov</option>
+                            <option value="12">Dec</option>
+                        </select>
+
+                        <select id="stateFilter"></select>
+
+                        <select id="categoryFilter"></select>
+                        <select id="statusFilter"></select>
+                    </div>
+
+                    <button id="exportCsvBtn">📥 Export CSV</button>
+                </div>
+            </section>
+
+            <section class="kpi-container">
+                <div class="kpi-card">
+                    <span>Total Revenue</span>
+                    <h2 id="revenue">$0</h2>
+                </div>
+
+                <div class="kpi-card">
+                    <span>Orders</span>
+                    <h2 id="orders">0</h2>
+                </div>
+
+                <div class="kpi-card">
+                    <span>Customers</span>
+                    <h2 id="customers">0</h2>
+                </div>
+
+                <div class="kpi-card">
+                    <span>AOV</span>
+                    <h2 id="aov">$0.00</h2>
+                </div>
+            </section>
+
+            <section class="chart-card">
+                <h2>Revenue Trend</h2>
+                <div class="chart-box large">
+                    <div id="revenueChart"></div>
+                </div>
+            </section>
+
+            <section class="two-column">
+                <div class="chart-card">
+                    <h2>Status</h2>
+                    <div class="chart-box">
+                        <div id="statusChart"></div>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <h2>Category</h2>
+                    <div class="chart-box">
+                        <div id="categoryChart"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="chart-card">
+                <h2>Revenue By State</h2>
+                <div class="chart-box large">
+                    <div id="stateChart"></div>
+                </div>
+            </section>
+
+            <section class="chart-card">
+                <h2>Top Products</h2>
+                <div class="chart-box large">
+                    <div id="productChart"></div>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+    <script src="/static/js/dashboard.js"></script>
+
+</body>
+
+</html>
